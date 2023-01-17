@@ -1,0 +1,12 @@
+package principal;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		System.out.println("________________________");
+		System.out.println("Cadstro de Funcionários");
+
+	}
+
+}

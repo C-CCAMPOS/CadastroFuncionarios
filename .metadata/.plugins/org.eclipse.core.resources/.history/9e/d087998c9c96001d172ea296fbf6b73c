@@ -1,0 +1,54 @@
+package principal;
+
+import java.util.Scanner;
+
+import entities.Funcionario;
+import repositories.FuncionarioRepository;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		/*
+		 * Neste projeto, desenvolva uma aplicação que leia os dados de um Funcionario e
+		 * grave as informações em um arquivo do tipo TXT na máquina local (em
+		 * c:\\temp\\funcionario.txt) A entidade Funcionario deverá ser composta pelos
+		 * campos: • Id do Funcionario (Integer) • Nome (String) • Cpf (String) •
+		 * Matrícula (String) • Salário (Double)
+		 */
+
+		System.out.println("-----------------------");
+		System.out.println("Cadstro de Funcionários");
+		System.out.println("-----------------------");
+
+		Funcionario funcionario = new Funcionario();
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("\n\nDigite o id do funcionário.......: ");
+		funcionario.setIdFuncionario(Integer.parseInt(scanner.nextLine()));
+
+		System.out.print("Digite o nome do funcionário.....: ");
+		funcionario.setNome(scanner.nextLine());
+
+		System.out.print("Digite o cpf do funcionário......: ");
+		funcionario.setCpf(scanner.nextLine());
+
+		System.out.print("Digite o matrícula do funcionário: ");
+		funcionario.setMatricula(scanner.nextLine());
+
+		System.out.print("Digite o salário do funcionário..: ");
+		funcionario.setSalario(Double.parseDouble(scanner.nextLine()));
+		
+		FuncionarioRepository funcionarioRepository = new FuncionarioRepository();
+		
+		try {
+			funcionarioRepository.exportarDados(funcionario);
+			System.out.print("\nCadastrado com sucesso!");
+		}
+		catch(Exception e) {
+			System.out.print("\nErro de cadastro!\n");
+			e.printStackTrace();
+		}
+	}
+
+}

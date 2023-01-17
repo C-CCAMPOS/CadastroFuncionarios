@@ -1,0 +1,19 @@
+package entities;
+
+public class Funcionario {
+
+	private Integer idFuncionario;
+	private String nome;
+	private String cpf;
+	private String matricula;
+	private Double salario;
+	
+	public void setIdFuncionário(Integer funcionario) {
+		this.idFuncionario = funcionario;
+	}
+	public Integer getIdFuncionario() {
+		return idFuncionario;
+	}
+	
+	
+}

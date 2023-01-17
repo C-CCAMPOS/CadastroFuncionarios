@@ -1,0 +1,25 @@
+package principal;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		/*Neste projeto, desenvolva uma aplicação que leia os dados de um 
+		Funcionario e grave as informações em um arquivo do tipo TXT
+		na máquina local (em c:\\temp\\funcionario.txt)
+		A entidade Funcionario deverá ser composta pelos campos:
+		• Id do Funcionario (Integer)
+		• Nome (String)
+		• Cpf (String)
+		• Matrícula (String)
+		• Salário (Double)*/
+		
+		System.out.println("-----------------------");
+		System.out.println("Cadstro de Funcionários");
+		System.out.println("-----------------------");
+		
+		System.out.println("Digiteo ");
+
+	}
+
+}
